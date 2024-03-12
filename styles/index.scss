@@ -1,0 +1,99 @@
+@use 'spacings';
+
+$theme: #18181b;
+$containerTheme: #52525b;
+$textColor: #d4d4d8;
+$secondaryColor: #6b21a8;
+
+
+body {
+  max-width: 1176px;
+  margin: 0 auto;
+  background-color: $theme;
+  color: $textColor;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: $containerTheme;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px 4px inset rgba(0, 0, 0, 0.397);
+
+  margin-top: spacings.$xl;
+  min-height: 800px;
+
+  h1 {
+    font-weight: bold;
+    margin-top: 1.2rem;
+  }
+}
+
+  .create-list  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: spacings.$sxl;
+    padding: spacings.$sm;
+    width: 600px;
+
+    .label-task {
+      width: 88%;
+      text-align: left;
+      font-weight: 600;
+      margin: spacings.$md;
+    }
+    .label-button {
+      background-color: $theme;
+      border: 1px solid $secondaryColor;
+      border-radius: 4px;
+      width: 200px;
+      text-align: center;
+      padding: spacings.$sm;
+      cursor: pointer;
+    }
+    .label-button:hover {
+      opacity: 60%;
+      transition: ease-in-out 700ms;
+    }
+
+    .task {
+      display: none;
+
+      button {
+        background-color: #22c55e;
+        border: 1px solid white;
+        border-radius: 4px;
+        width: 120px;
+        padding: spacings.$sm;
+        color: $textColor;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 65%;
+        transition: ease-in-out 700ms;
+      }
+    }
+
+    #task-input {
+      background-color: #e4e4e7;
+      color: black;
+      border: none;
+      border-radius: 2px;
+      width: 400px;
+      padding: spacings.$sm;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    #task-input:hover{
+      opacity: 60%;
+      transition: ease-in-out 700ms;
+    }
+    #task-input:focus-visible {
+      outline: 2px solid black;
+    }
+  }
+
