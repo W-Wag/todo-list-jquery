@@ -88,12 +88,55 @@ body {
       font-size: 0.8rem;
       font-weight: bold;
     }
-    #task-input:hover{
-      opacity: 60%;
-      transition: ease-in-out 700ms;
-    }
     #task-input:focus-visible {
       outline: 2px solid black;
     }
+  }
+
+  #table-container {
+    display: flex;
+    max-width: 80%;
+    overflow-x: auto;
+  }
+  .task-table {
+    min-width: 800px;
+    display: none;
+
+    thead {
+
+      tr {
+        td {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+      .edit-task {
+        color: yellow;
+      }
+      .delete-task {
+        color: red;
+      }
+    }
+
+
+    tbody {
+      .finished-task {
+        display: none;
+      }
+      button {
+        border: none;
+        margin-bottom: 12px;
+        width: 80px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 40%;
+      }
+    }
+    
   }
 

@@ -13,8 +13,7 @@
     <h1>To Do List</h1>
 
       <form class="create-list">
-        <p class="first-task-paragraph">Para iniciar o seu To do list e necessário criar sua primeira tarefa. Vamos lá?</p>
-        <label class="label-button label-task" for="task">Criar uma tarefa</label>
+        <label class="label-button label-task" for="task-input">Criar uma tarefa</label>
 
         <div class="task">
           <input 
@@ -24,6 +23,29 @@
         <button type="submit">Criar</button>
         </div>
       </form>
+
+      <div id="table-container">
+        <p class="first-task-paragraph">Para iniciar o sua lista de tarefas e necessário criar sua primeira tarefa. Vamos lá?</p>
+        <table class="task-table" title="Lista de Tarefas">
+          <thead>
+            <th>Lista de Tarefas</th>
+            <tr>
+              <td>Tarefa</td>
+              <td>Status</td>
+              <td>Criado em</td>
+              <td class="finished-task">Concluído em</td>
+              <td class="edit-task">Editar</td>
+              <td class="delete-task">Deletar</td>
+            </tr>
+          </thead>
+          <tbody class="task-list">
+          </tbody>
+        </table>
+      </div>
+
+      <dialog>
+        Hello World
+      </dialog>
 
   </div>
   

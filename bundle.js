@@ -1,9 +1,9 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./styles/index.scss":
+/***/ "./node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./styles/style.scss":
 /*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./styles/index.scss ***!
+  !*** ./node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./styles/style.scss ***!
   \*****************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -98,13 +98,46 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
   font-size: 0.8rem;
   font-weight: bold;
 }
-.create-list #task-input:hover {
-  opacity: 60%;
-  transition: ease-in-out 700ms;
-}
 .create-list #task-input:focus-visible {
   outline: 2px solid black;
-}`, "",{"version":3,"sources":["webpack://./styles/index.scss","webpack://./styles/spacings.scss"],"names":[],"mappings":"AAQA;EACE,iBAAA;EACA,cAAA;EACA,yBATM;EAUN,cARU;AACZ;;AAUA;EACE,aAAA;EACA,sBAAA;EACA,qBAAA;EACA,mBAAA;EACA,yBAjBe;EAkBf,kBAAA;EACA,sDAAA;EAEA,mBCrBG;EDsBH,iBAAA;AARF;AAUE;EACE,iBAAA;EACA,kBAAA;AARJ;;AAYE;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBCjCE;EDkCF,eCtCC;EDuCD,YAAA;AATJ;AAWI;EACE,UAAA;EACA,gBAAA;EACA,gBAAA;EACA,eC5CD;ADmCL;AAWI;EACE,yBA9CE;EA+CF,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eCrDD;EDsDC,eAAA;AATN;AAWI;EACE,YAAA;EACA,6BAAA;AATN;AAYI;EACE,aAAA;AAVN;AAYM;EACE,yBAAA;EACA,uBAAA;EACA,kBAAA;EACA,YAAA;EACA,eCrEH;EDsEG,cAlEI;EAmEJ,gBAAA;EACA,eAAA;AAVR;AAYM;EACE,YAAA;EACA,6BAAA;AAVR;AAcI;EACE,yBAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,YAAA;EACA,eCtFD;EDuFC,iBAAA;EACA,iBAAA;AAZN;AAcI;EACE,YAAA;EACA,6BAAA;AAZN;AAcI;EACE,wBAAA;AAZN","sourcesContent":["@use 'spacings';\n\n$theme: #18181b;\n$containerTheme: #52525b;\n$textColor: #d4d4d8;\n$secondaryColor: #6b21a8;\n\n\nbody {\n  max-width: 1176px;\n  margin: 0 auto;\n  background-color: $theme;\n  color: $textColor;\n}\n\n.container {\n  display: flex;\n  flex-direction: column;\n  justify-items: center;\n  align-items: center;\n  background-color: $containerTheme;\n  border-radius: 6px;\n  box-shadow: 1px 1px 1px 4px inset rgba(0, 0, 0, 0.397);\n\n  margin-top: spacings.$xl;\n  min-height: 800px;\n\n  h1 {\n    font-weight: bold;\n    margin-top: 1.2rem;\n  }\n}\n\n  .create-list  {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-top: spacings.$sxl;\n    padding: spacings.$sm;\n    width: 600px;\n\n    .label-task {\n      width: 88%;\n      text-align: left;\n      font-weight: 600;\n      margin: spacings.$md;\n    }\n    .label-button {\n      background-color: $theme;\n      border: 1px solid $secondaryColor;\n      border-radius: 4px;\n      width: 200px;\n      text-align: center;\n      padding: spacings.$sm;\n      cursor: pointer;\n    }\n    .label-button:hover {\n      opacity: 60%;\n      transition: ease-in-out 700ms;\n    }\n\n    .task {\n      display: none;\n\n      button {\n        background-color: #22c55e;\n        border: 1px solid white;\n        border-radius: 4px;\n        width: 120px;\n        padding: spacings.$sm;\n        color: $textColor;\n        font-weight: 600;\n        cursor: pointer;\n      }\n      button:hover {\n        opacity: 65%;\n        transition: ease-in-out 700ms;\n      }\n    }\n\n    #task-input {\n      background-color: #e4e4e7;\n      color: black;\n      border: none;\n      border-radius: 2px;\n      width: 400px;\n      padding: spacings.$sm;\n      font-size: 0.8rem;\n      font-weight: bold;\n    }\n    #task-input:hover{\n      opacity: 60%;\n      transition: ease-in-out 700ms;\n    }\n    #task-input:focus-visible {\n      outline: 2px solid black;\n    }\n  }\n\n","$sm: 2rem / 4;\n$md: 3rem / 4;\n$lg: 4rem / 4;\n$xl: 5rem / 4;\n$sxl: 6rem /4;\n$ssxl: 10rem /4;\n"],"sourceRoot":""}]);
+}
+
+#table-container {
+  display: flex;
+  max-width: 80%;
+  overflow-x: auto;
+}
+
+.task-table {
+  min-width: 800px;
+  display: none;
+}
+.task-table thead tr td {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.task-table thead .edit-task {
+  color: yellow;
+}
+.task-table thead .delete-task {
+  color: red;
+}
+.task-table tbody .finished-task {
+  display: none;
+}
+.task-table tbody button {
+  border: none;
+  margin-bottom: 12px;
+  width: 80px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.task-table tbody button:hover {
+  opacity: 40%;
+}`, "",{"version":3,"sources":["webpack://./styles/style.scss","webpack://./styles/spacings.scss"],"names":[],"mappings":"AAQA;EACE,iBAAA;EACA,cAAA;EACA,yBATM;EAUN,cARU;AACZ;;AAUA;EACE,aAAA;EACA,sBAAA;EACA,qBAAA;EACA,mBAAA;EACA,yBAjBe;EAkBf,kBAAA;EACA,sDAAA;EAEA,mBCrBG;EDsBH,iBAAA;AARF;AAUE;EACE,iBAAA;EACA,kBAAA;AARJ;;AAYE;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBCjCE;EDkCF,eCtCC;EDuCD,YAAA;AATJ;AAWI;EACE,UAAA;EACA,gBAAA;EACA,gBAAA;EACA,eC5CD;ADmCL;AAWI;EACE,yBA9CE;EA+CF,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eCrDD;EDsDC,eAAA;AATN;AAWI;EACE,YAAA;EACA,6BAAA;AATN;AAYI;EACE,aAAA;AAVN;AAYM;EACE,yBAAA;EACA,uBAAA;EACA,kBAAA;EACA,YAAA;EACA,eCrEH;EDsEG,cAlEI;EAmEJ,gBAAA;EACA,eAAA;AAVR;AAYM;EACE,YAAA;EACA,6BAAA;AAVR;AAcI;EACE,yBAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,YAAA;EACA,eCtFD;EDuFC,iBAAA;EACA,iBAAA;AAZN;AAcI;EACE,wBAAA;AAZN;;AAgBE;EACE,aAAA;EACA,cAAA;EACA,gBAAA;AAbJ;;AAeE;EACE,gBAAA;EACA,aAAA;AAZJ;AAiBQ;EACE,eAAA;EACA,gBAAA;AAfV;AAkBM;EACE,aAAA;AAhBR;AAkBM;EACE,UAAA;AAhBR;AAsBM;EACE,aAAA;AApBR;AAsBM;EACE,YAAA;EACA,mBAAA;EACA,WAAA;EACA,6BAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,eAAA;AApBR;AAsBM;EACE,YAAA;AApBR","sourcesContent":["@use 'spacings';\r\n\r\n$theme: #18181b;\r\n$containerTheme: #52525b;\r\n$textColor: #d4d4d8;\r\n$secondaryColor: #6b21a8;\r\n\r\n\r\nbody {\r\n  max-width: 1176px;\r\n  margin: 0 auto;\r\n  background-color: $theme;\r\n  color: $textColor;\r\n}\r\n\r\n.container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-items: center;\r\n  align-items: center;\r\n  background-color: $containerTheme;\r\n  border-radius: 6px;\r\n  box-shadow: 1px 1px 1px 4px inset rgba(0, 0, 0, 0.397);\r\n\r\n  margin-top: spacings.$xl;\r\n  min-height: 800px;\r\n\r\n  h1 {\r\n    font-weight: bold;\r\n    margin-top: 1.2rem;\r\n  }\r\n}\r\n\r\n  .create-list  {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    margin-top: spacings.$sxl;\r\n    padding: spacings.$sm;\r\n    width: 600px;\r\n\r\n    .label-task {\r\n      width: 88%;\r\n      text-align: left;\r\n      font-weight: 600;\r\n      margin: spacings.$md;\r\n    }\r\n    .label-button {\r\n      background-color: $theme;\r\n      border: 1px solid $secondaryColor;\r\n      border-radius: 4px;\r\n      width: 200px;\r\n      text-align: center;\r\n      padding: spacings.$sm;\r\n      cursor: pointer;\r\n    }\r\n    .label-button:hover {\r\n      opacity: 60%;\r\n      transition: ease-in-out 700ms;\r\n    }\r\n\r\n    .task {\r\n      display: none;\r\n\r\n      button {\r\n        background-color: #22c55e;\r\n        border: 1px solid white;\r\n        border-radius: 4px;\r\n        width: 120px;\r\n        padding: spacings.$sm;\r\n        color: $textColor;\r\n        font-weight: 600;\r\n        cursor: pointer;\r\n      }\r\n      button:hover {\r\n        opacity: 65%;\r\n        transition: ease-in-out 700ms;\r\n      }\r\n    }\r\n\r\n    #task-input {\r\n      background-color: #e4e4e7;\r\n      color: black;\r\n      border: none;\r\n      border-radius: 2px;\r\n      width: 400px;\r\n      padding: spacings.$sm;\r\n      font-size: 0.8rem;\r\n      font-weight: bold;\r\n    }\r\n    #task-input:focus-visible {\r\n      outline: 2px solid black;\r\n    }\r\n  }\r\n\r\n  #table-container {\r\n    display: flex;\r\n    max-width: 80%;\r\n    overflow-x: auto;\r\n  }\r\n  .task-table {\r\n    min-width: 800px;\r\n    display: none;\r\n\r\n    thead {\r\n\r\n      tr {\r\n        td {\r\n          font-size: 1rem;\r\n          font-weight: 600;\r\n        }\r\n      }\r\n      .edit-task {\r\n        color: yellow;\r\n      }\r\n      .delete-task {\r\n        color: red;\r\n      }\r\n    }\r\n\r\n\r\n    tbody {\r\n      .finished-task {\r\n        display: none;\r\n      }\r\n      button {\r\n        border: none;\r\n        margin-bottom: 12px;\r\n        width: 80px;\r\n        background-color: transparent;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n        cursor: pointer;\r\n      }\r\n      button:hover {\r\n        opacity: 40%;\r\n      }\r\n    }\r\n    \r\n  }\r\n\r\n","$sm: 2rem / 4;\r\n$md: 3rem / 4;\r\n$lg: 4rem / 4;\r\n$xl: 5rem / 4;\r\n$sxl: 6rem /4;\r\n$ssxl: 10rem /4;\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10959,9 +10992,9 @@ return jQuery;
 
 /***/ }),
 
-/***/ "./styles/index.scss":
+/***/ "./styles/style.scss":
 /*!***************************!*\
-  !*** ./styles/index.scss ***!
+  !*** ./styles/style.scss ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -10982,7 +11015,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/.pnpm/style-loader@3.3.4_webpack@5.90.3/node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/.pnpm/style-loader@3.3.4_webpack@5.90.3/node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!../node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./index.scss */ "./node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./styles/index.scss");
+/* harmony import */ var _node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!../node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./style.scss */ "./node_modules/.pnpm/css-loader@6.10.0_webpack@5.90.3/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@14.1.1_sass@1.71.1_webpack@5.90.3/node_modules/sass-loader/dist/cjs.js!./styles/style.scss");
 
       
       
@@ -11004,12 +11037,12 @@ options.setAttributes = (_node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_no
 options.domAPI = (_node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_pnpm_style_loader_3_3_4_webpack_5_90_3_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_pnpm_css_loader_6_10_0_webpack_5_90_3_node_modules_css_loader_dist_cjs_js_node_modules_pnpm_sass_loader_14_1_1_sass_1_71_1_webpack_5_90_3_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -11297,13 +11330,79 @@ module.exports = styleTagTransform;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/.pnpm/jquery@3.7.1/node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_generateDateFunction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/generateDateFunction */ "./scripts/utils/generateDateFunction.ts");
 
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-list').on('submit', function (e) {
+    e.preventDefault();
+    const newTask = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#task-input').val();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.task-table').show();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.finished-task').hide();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.task-list').append(`
+  <tr>
+   <td class="task-name"> ${newTask} </td> 
+   <td> em curso </td> 
+   <td> ${(0,_utils_generateDateFunction__WEBPACK_IMPORTED_MODULE_1__.generateDate)(new Date())} </td> 
+   <td class="finished-task finished-task-content"></td> 
+   <td style="width: 40px;">
+    <button type="button" class="edit">
+      <img loading="lazy" width="25px" height="25px" src="./assets/edit-icon.svg" alt="O ícone para você editar sua tarefa">
+    </button>
+   </td> 
+   <td style="width: 40px;"> 
+      <button>
+        <img loading="lazy" width="25px" height="25px" src="./assets/delete-icon.svg" alt="O ícone para você deletar sua tarefa">
+    </button> 
+ </td> 
+
+   </tr>
+ `);
+});
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.label-task').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.task').show();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.label-button').removeClass('label-button');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.label-task').text('Tarefa a ser criada:');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.first-task-paragraph').hide();
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('button').on('click', function () {
+    console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents());
+});
+
+
+/***/ }),
+
+/***/ "./scripts/utils/generateDateFunction.ts":
+/*!***********************************************!*\
+  !*** ./scripts/utils/generateDateFunction.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   generateDate: () => (/* binding */ generateDate)
+/* harmony export */ });
+/* harmony import */ var _zeroLeftFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./zeroLeftFunction */ "./scripts/utils/zeroLeftFunction.ts");
+
+function generateDate(date) {
+    return `${(0,_zeroLeftFunction__WEBPACK_IMPORTED_MODULE_0__.zeroLeft)(date.getDate())}/${(0,_zeroLeftFunction__WEBPACK_IMPORTED_MODULE_0__.zeroLeft)(date.getMonth())}/${date.getFullYear()} ${(0,_zeroLeftFunction__WEBPACK_IMPORTED_MODULE_0__.zeroLeft)(date.getHours())}:${(0,_zeroLeftFunction__WEBPACK_IMPORTED_MODULE_0__.zeroLeft)(date.getMinutes())}`;
+}
+
+
+/***/ }),
+
+/***/ "./scripts/utils/zeroLeftFunction.ts":
+/*!*******************************************!*\
+  !*** ./scripts/utils/zeroLeftFunction.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   zeroLeft: () => (/* binding */ zeroLeft)
+/* harmony export */ });
+const zeroLeft = (n) => Math.floor(n).toString().padStart(2, '0');
 
 
 /***/ })
@@ -11390,7 +11489,7 @@ var __webpack_exports__ = {};
   \**************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./script */ "./scripts/script.ts");
-/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/index.scss */ "./styles/index.scss");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
 
 
 

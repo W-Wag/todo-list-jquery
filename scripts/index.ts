@@ -1,2 +1,2 @@
 import './script';
-import '../styles/index.scss';
+import '../styles/style.scss';
